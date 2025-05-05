@@ -1,9 +1,5 @@
 const imagenesGuardadas = JSON.parse(localStorage.getItem("imagenes")) || [];
 
-
-
-
-
 const body = document.createElement("body");
 const container = document.createElement("div");
 
@@ -20,26 +16,29 @@ const createStyles = () => {
         }
         .header{
             margin-button:10px;
-
-            background-color: green;
+            background-color: aliceblue;
             border: 2px solid;
-            
+            padding:10px;
             text-aling:center;
         }
         .footer{
-            color:#fff;
+            color:black;
             margin-top:10px;
-            background-color: blue;
+            background-color: aliceblue;
             border: 2px solid black;
             text-align:center;        
         }
         .container {
             margin-top:10px;
-            border: 2px solid;
+            border: 2px solid maroon;
             display: flex;
             flex-direction: column;
             align-items: center;
+            text-align:center;
             padding:10px;
+            background-color:snow;
+            width:100%;
+            height:100%;
         }
         label {
             font-weight: bold;
@@ -57,13 +56,23 @@ const createStyles = () => {
             
         }
         .nav{
-            background-color: yellow;
+            background-color: seashell;
             border:2px solid;
-            text-align:right;
-            pading:10px;
+            text-align:center;
+            padding:10px;
+            width:180px;
+            align-items: right;
+
         }
         .gallery{
-            border: 1px solid red;
+            border: 1px solid maroon;
+            padding:10px;
+            display:flex;
+        }
+        .gallery-item{
+            padding:5px;
+            border:1px solid black;
+            margin-top:10px;
         }
     `;
     document.head.appendChild(style);
@@ -75,7 +84,7 @@ const createHeader = () => {
     header.className = 'header';  
 
     const titulo = document.createElement("h1");
-    titulo.textContent="Bienvenidos";
+    titulo.textContent="Laboratorio 1";
 
 
     const navBar = document.createElement("nav");
@@ -130,7 +139,7 @@ const createImages = () => {
 const createFooter = () => {
     const footer = document.createElement("footer");
     footer.className = "footer";
-    footer.textContent = "Johan Alomia";
+    footer.textContent = "© Johan Alomia";
     document.body.appendChild(footer);
 };
 

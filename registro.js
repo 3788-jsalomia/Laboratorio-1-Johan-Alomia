@@ -1,4 +1,4 @@
-export const imagenes = JSON.parse(localStorage.getItem("imagenes")) || [];
+const imagenes = JSON.parse(localStorage.getItem("imagenes")) || [];
 
 
 const body = document.createElement("body");
@@ -17,26 +17,27 @@ const createStyles = () => {
         }
         .header{
             margin-button:10px;
-
-            background-color: green;
+            background-color: aliceblue;
             border: 2px solid;
-            
+            padding:10px;
             text-aling:center;
         }
         .footer{
-            color:#fff;
+            color:black;
             margin-top:10px;
-            background-color: blue;
+            background-color: aliceblue;
             border: 2px solid black;
             text-align:center;        
         }
         .container {
-            margin-top:15px;
-            border: 2px solid;
+            margin-top:10px;
+            border: 2px solid maroon;
             display: flex;
             flex-direction: column;
             align-items: center;
+            text-align:center;
             padding:10px;
+            background-color:snow;
         }
         label {
             font-weight: bold;
@@ -59,8 +60,7 @@ const createStyles = () => {
 
         h1{
             color:black;
-            size:16px;
-            
+            size:16px; 
         }
         .nav{
             background-color: yelow;
